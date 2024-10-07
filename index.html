@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>paint App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="canvas-section">
+      <canvas id="canvas"> </canvas>
+      <div id="buttons-container">
+        <div class="buttons-sub-container">
+          <div class="bg-color-change-btns">
+            <span class="fill">Fill</span>
+            <button class="bg-black bg-btn"></button>
+            <button class="bg-green bg-btn"></button>
+            <button class="bg-yellow bg-btn"></button>
+            <button class="bg-cyan bg-btn"></button>
+            <button class="bg-white bg-btn active"></button>
+            <div class="color-input-wrapper bg-btn">
+              <input
+                type="color"
+                id="bg-color-code"
+                value=""
+                placeholder="Enter background color"
+              />
+              <span class="tooltip">Pick Color</span>
+            </div>
+          </div>
+          <div class="stroke-color-change-btns">
+            <span class="stroke">Stroke</span>
+            <button class="bg-black stroke-btn active"></button>
+            <button class="bg-green stroke-btn"></button>
+            <button class="bg-yellow stroke-btn"></button>
+            <button class="bg-cyan stroke-btn"></button>
+            <button class="bg-white stroke-btn"></button>
+            <div class="color-input-wrapper stroke-btn">
+              <input
+                type="color"
+                id="stroke-color-code"
+                value=""
+                placeholder="Enter stroke color"
+              />
+              <span class="tooltip">Pick Color</span>
+            </div>
+          </div>
+
+          <div class="slider-container">
+            <label class="slider" for="size-slider"
+              >Width
+              <input
+                type="number"
+                id="size-slider"
+                min="1"
+                max="20"
+                value="1"
+              />
+            </label>
+            <button id="eraser-btn">
+                <span class="eraser-up"></span>
+                <span class="eraser-bottom"></span>
+            </button>
+            <button class="clear-canvas">Clear</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
